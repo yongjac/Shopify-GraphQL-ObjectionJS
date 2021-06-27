@@ -1,0 +1,31 @@
+{
+  "name": "shopify-graphql-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "make-seed": "npx knex seed:make dev --knexfile ./db/knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile ./db/knexfile.js",
+    "seed": "npx knex seed:run --knexfile ./db/knexfile.js",
+    "down": "npx knex migrate:down --knexfile ./db/knexfile.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.1",
+    "graphql-bigint": "^1.0.0",
+    "knex": "^0.95.6",
+    "node-fetch": "^2.6.1",
+    "objection": "^2.2.15",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
